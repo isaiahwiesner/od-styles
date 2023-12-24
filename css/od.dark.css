@@ -1,0 +1,28 @@
+:root {
+    --background: #111;
+    --background-paper: #000;
+    --contrast: #fff;
+    --lighter-contrast: #777;
+    --placeholder: #ffffff70;
+    
+    --navbar-height: 4rem;
+    --navbar-background: #222;
+    --navbar-contrast: #fff;
+
+    --footer-height: 4rem;
+    --footer-background: #555;
+    --footer-contrast: #fff;
+
+    --primary: #06ff06;
+    --primary-hover: #50ff50;
+    --primary-contrast: #111;
+    --secondary: #f606e9;
+    --secondary-hover: #f950f0;
+    --secondary-contrast: #fff;
+
+    --error: #f60606;
+    --error-hover: #f95050;
+    --error-contrast: #fff;
+    --link: #3388ff;
+    ---link-hover: #70abff;
+}

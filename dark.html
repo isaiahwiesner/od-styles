@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Roboto Condensed -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <title>OnlyDeposits Style Test</title>
+    <link rel="stylesheet" href="./css/od.main.css">
+    <link rel="stylesheet" href="./css/od.store.css">
+    <link rel="stylesheet" href="./css/od.dark.css">
+</head>
+
+<body>
+
+    <div class="content-container content-margins" style="display: flex;flex-direction: column;gap: 2rem;">
+
+
+        <!-- Navbar -->
+        <div>
+            <h4>Navbar</h4>
+            <div class="navbar" style="position: relative;width: 100%;margin-top: 1rem;">
+                <a href="#" class="logo">
+                    <div style="display: flex;align-items: center;">
+                        <img src="/imgs/logo-green.png" alt="OnlyDeposits">
+                    </div>
+                </a>
+                <div class="navbar-links">
+                    <a href="#cart" class="nav-item">
+                        <span class="material-symbols-outlined">
+                            shopping_bag
+                        </span>
+                    </a>
+                    <a href="#products" class="nav-item">
+                        Product Catalog
+                    </a>
+                    <a href="#categories" class="nav-item">
+                        Categories
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Footer -->
+        <div>
+            <h4>Footer</h4>
+            <div class="footer" style="margin-top: 1rem;">
+                <div style="display: flex;justify-content: center;width: 100%;">
+                    <div style="display: flex;gap: 0.5rem;align-items: center;">
+                        <p class="center" style="width: 100%;color: var(--green);">
+                            Copyright &copy;
+                            <script>document.write(new Date().getFullYear());</script>
+                        </p>
+                        <img src="/imgs/logo-green.png" alt="OnlyDeposits" style="height: 2rem;width: auto;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Searchbar -->
+        <div>
+            <h4>Searchbar</h4>
+            <div class="searchbar" style="margin-top: 1rem;">
+                <input id="searchbar-input" type="text" placeholder="Search text">
+                <button id="searchbar-button">Search</button>
+            </div>
+            <button class="link" style="margin-top: 0.5rem"
+                onClick="cycleSearchbar(this, 'searchbar-input', 'searchbar-button')">
+                Style: None
+            </button>
+        </div>
+
+        <!-- Forms -->
+        <div>
+            <h4>Forms</h4>
+            <div class="form" style="margin-top: 1rem;">
+                <div class="form-group">
+                    <label for="form-text-input">Text Input</label>
+                    <input id="form-text-input" class="form-control" type="text" placeholder="Text input">
+                </div>
+                <div class="form-group">
+                    <label for="form-number-input">Number Input</label>
+                    <input id="form-number-input" class="form-control" type="number" placeholder="Number input">
+                </div>
+                <div class="form-group">
+                    <label for="form-select-input">Select Input</label>
+                    <select id="form-select-input" class="form-control" placeholder="Number input">
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                    </select>
+                </div>
+            </div>
+            <button class="link" style="margin-top: 0.5rem"
+                onClick="cycleForm(this, ['form-text-input', 'form-number-input', 'form-select-input'])">
+                Style: None
+            </button>
+        </div>
+
+
+        <!-- Buttons -->
+        <div>
+            <h4>Buttons</h4>
+            <div class="form" style="margin-top: 1rem;">
+                <button class="btn btn-primary" id="btn-p">Primary</button>
+                <button class="btn btn-primary-outline" id="btn-po">Primary Outline</button>
+                <button class="btn btn-secondary" id="btn-s">Secondary</button>
+                <button class="btn btn-secondary-outline" id="btn-so">Secondary Outline</button>
+                <button class="btn btn-error" id="btn-e">Error</button>
+                <button class="btn btn-error-outline" id="btn-eo">Error Outline</button>
+            </div>
+            <button class="link" style="margin-top: 0.5rem"
+                onClick="cycleButtons(this, ['btn-p', 'btn-po', 'btn-s', 'btn-so', 'btn-e', 'btn-eo'])">
+                Style: None
+            </button>
+        </div>
+
+        <!-- Categories -->
+        <div>
+            <h4>Categories</h4>
+            <div class="category-container">
+                <div class="category" style="margin-top: 1rem;">
+                    <div class="bg-image" style="background-image: url(./imgs/landing-background.png);"></div>
+                    <div class="info">
+                        <h6 class="truncate">Category 1</h6>
+                        <p class="truncate">Category description</p>
+                        <button class="btn btn-primary-outline">View</button>
+                    </div>
+                </div>
+                <div class="category" style="margin-top: 1rem;">
+                    <div class="bg-image" style="background-image: url(./imgs/landing-background.png);"></div>
+                    <div class="info">
+                        <h6 class="truncate">Category 2</h6>
+                        <p class="truncate">Category description ads dsa dsad asd sad asa dasd asdsad asd sadsad asd asd
+                            sad</p>
+                        <button class="btn btn-primary-outline">View</button>
+                    </div>
+                </div>
+                <div class="category" style="margin-top: 1rem;">
+                    <div class="bg-image" style="background-image: url(./imgs/landing-background.png);"></div>
+                    <div class="info">
+                        <h6 class="truncate">Category 3</h6>
+                        <p class="truncate">Category description</p>
+                        <button class="btn btn-primary-outline">View</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Products -->
+        <div>
+            <h4>Products</h4>
+            <div class="category-container">
+                <div class="products" style="margin-top: 1rem;">
+                    <div class="bg-image" style="background-image: url(./imgs/landing-background.png);"></div>
+                    <div class="info">
+                        <h6 class="truncate">Product 1</h6>
+                        <p class="price">$11.99</p>
+                        <p class="truncate">Product description</p>
+                        <button class="btn btn-primary-outline">View</button>
+                    </div>
+                </div>
+                <div class="products" style="margin-top: 1rem;">
+                    <div class="bg-image" style="background-image: url(./imgs/landing-background.png);"></div>
+                    <div class="info">
+                        <h6 class="truncate">Product 2</h6>
+                        <p class="price">$12.99</p>
+                        <p class="truncate">Product description ads dsa dsad asd sad asa dasd asdsad asd sadsad asd asd
+                            sad</p>
+                        <button class="btn btn-primary-outline">View</button>
+                    </div>
+                </div>
+                <div class="products" style="margin-top: 1rem;">
+                    <div class="bg-image" style="background-image: url(./imgs/landing-background.png);"></div>
+                    <div class="info">
+                        <h6 class="truncate">Product 3</h6>
+                        <p class="price">$13.99</p>
+                        <p class="truncate">Product description</p>
+                        <button class="btn btn-primary-outline">View</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+
+<script src="./script.js"></script>
+
+</html>
