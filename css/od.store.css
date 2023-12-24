@@ -15,6 +15,7 @@
     font-size: 1rem;
     background-color: var(--background-paper);
     color: var(--contrast);
+    border-radius: 0;
 }
 
 .searchbar input::placeholder {

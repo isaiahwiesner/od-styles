@@ -337,6 +337,7 @@ a:hover, .link:hover {
     resize: none;
     background-color: var(--background-paper);
     color: var(--contrast);
+    border-radius: 0;
 }
 .form-control::placeholder {
     color: var(--placeholder);
